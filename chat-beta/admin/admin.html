@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="admin.css">
+    <script type="module" src="admin.js"></script>
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="admin-sidebar">
+            <h2>Admin Dashboard</h2>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#user-management" class="dropbtn">User Management <span class="dropdown-icon">&#9662;</span></a>
+                        <div class="dropdown-content">
+                            <a href="#add-user">Add User</a>
+                            <a href="#update-user">Update User</a>
+                            <a href="#delete-user">Delete User</a>
+                        </div>
+                    </li>
+                    <li><a href="#data-management" class="active">Data Management</a></li>
+                    <li><a href="#template-management">Template Management</a></li>
+                </ul>
+
+                <div class="token-usage">
+                    <h3>Token Usage</h3>
+                    <p>Used: <span id="tokens-used">0</span></p>
+                    <p>Total: <span id="tokens-total">N/A</span></p>
+                </div>
+                <button id="logout-button" class="logout-btn">Logout</button>
+            </nav>
+        </aside>
+        <main class="admin-main-content">
+
+            <section id="user-management" class="admin-section">
+    <h2>User Management</h2>
+    <div class="under-construction">
+        <!-- Modern SVG Illustration from unDraw -->
+        <img src="img/undraw_under-construction_c2y1.svg" 
+             alt="Under Construction Illustration" class="uc-image">
+        <p>We’re working hard to bring you this feature. Stay tuned!</p>
+    </div>
+</section>
+
+<section id="add-user" class="admin-section" style="display:none;">
+    <h2>Add User</h2>
+    <div class="under-construction">
+        <img src="img/undraw_under-construction_c2y1.svg" 
+             alt="Under Construction Illustration" class="uc-image">
+        <p>Add User functionality coming soon!</p>
+    </div>
+</section>
+
+<section id="update-user" class="admin-section" style="display:none;">
+    <h2>Update User</h2>
+    <div class="under-construction">
+        <img src="img/undraw_under-construction_c2y1.svg" 
+             alt="Under Construction Illustration" class="uc-image">
+        <p>Update User functionality coming soon!</p>
+    </div>
+</section>
+
+<section id="delete-user" class="admin-section" style="display:none;">
+    <h2>Delete User</h2>
+    <div class="under-construction">
+        <img src="img/undraw_under-construction_c2y1.svg" 
+             alt="Under Construction Illustration" class="uc-image">
+        <p>Delete User functionality coming soon!</p>
+    </div>
+</section>
+
+
+            <section id="data-management" class="admin-section">
+    <h2>Data Management</h2>
+    <div class="under-construction">
+        <img src="img/undraw_data-processing_z2q6.svg" alt="Data Management" class="uc-image">
+        <p>This feature is under development. Stay tuned for updates!</p>
+    </div>
+</section>
+
+            <section id="template-management" class="admin-section">
+                <h2>Template Management</h2>
+                <p>Content for managing templates will go here.</p>
+                <div id="template-list" class="template-list">
+                    <table class="template-table">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Templates will be loaded here by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="instructions">
+                    <h3>How to Add New Templates</h3>
+                    <ol>
+                        <li>Click the "Add New Template" button.</li>
+                        <li>Fill in the template details in the form that appears.</li>
+                        <li>Click "Save Template" to add it to the list.</li>
+                    </ol>
+                </div>
+                <button id="add-template-btn" class="btn-submit">Add New Template</button>
+                <form id="template-form" class="template-form" style="display: none;">
+                    <div class="form-group">
+                        <label for="template-title">Template Name:</label>
+                        <input type="text" id="template-title" name="template-title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="template-description">Description:</label>
+                        <textarea id="template-description" name="template-description" rows="5" maxlength="1000" required></textarea>
+                        <span id="description-char-count">0/1000</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="template-keywords">Keywords (max 5):</label>
+                        <div id="keywords-container" class="keywords-container">
+                            <input type="text" id="keyword-input" placeholder="Add keyword...">
+                        </div>
+                        <input type="hidden" id="template-keywords" name="template-keywords">
+                    </div>
+                    <div class="form-group">
+                        <label for="template-questions">Questions (max 5):</label>
+                        <div id="questions-container" class="questions-container">
+                            <input type="text" id="question-input" placeholder="Add question...">
+                        </div>
+                        <input type="hidden" id="template-questions" name="template-questions">
+                    </div>
+                    <button type="submit" class="btn-submit">Save Template</button>
+                </form>
+            </section>
+        </main>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>
